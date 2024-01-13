@@ -1,0 +1,46 @@
+﻿/*@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+body {
+    font-family: 'urbanist', sans-serif;
+    overflow:hidden;
+}
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+a:hover{
+    color: currentColor;
+}*/
+.TTNV {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 15px;
+    line-height: 1.5;
+    color: black;
+    background-color: #f1f1f1;
+    background-clip: padding-box;
+    height: 45px;
+    border: 1px solid #dadada;
+    border-radius: .357rem;
+}
+.item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: .375rem;
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    font-size: 1.08em;
+    border-left: 0px;
+    box-shadow: none;
+    -webkit-transition: border-left-color 0.3s ease, background-color 0.3s ease;
+    -o-transition: border-left-color 0.3s ease, background-color 0.3s ease;
+    transition: border-left-color 0.3s ease, background-color 0.3s ease;
+    color: white;
+    border: 1px solid transparent;
+    /* border-bottom: 1px solid #ddd;
+}

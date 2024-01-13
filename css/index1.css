@@ -1,0 +1,17 @@
+﻿.shop-cart-number-badge {
+    position: relative;
+    border-radius: 2.75rem;
+    min-width: 0.6875rem;
+    line-height: 1.2em;
+    padding: 0 0.3125rem;
+    text-align: center;
+    border: 0.125rem solid var(--brand-primary-color,#ee4d2d);
+    color: var(--brand-primary-color,#ee4d2d);
+    background-color: #fff;
+    left: -1.125rem;
+    top: -0.5rem;
+    margin-right: -0.875rem;
+}
+.color-red{
+   color:red;
+}

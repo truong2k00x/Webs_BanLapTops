@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ThanhToanKD.ascx.cs" Inherits="webs_banlaptop.SANPHAM.thanhtoan.NganHang.ThanhToanKD" %>
+<li style="margin-top:10px" class="border"><img width="70px" height="auto" src="http://www.donghohanghieu.com/wp-content/uploads/2016/08/Tienmat_Icon_big-2.png" /> Thanh Toán Khi Nhận Hàng</li>
+<asp:Literal ID="lithanhtoan" runat="server"></asp:Literal>

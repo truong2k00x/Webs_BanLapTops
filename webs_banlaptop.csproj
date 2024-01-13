@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BFA3292-B7C9-4548-988F-3DB8597BDFF1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>webs_banlaptop</RootNamespace>
+    <AssemblyName>webs_banlaptop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Bootstrap.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.Web, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.32.1\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin.aspx" />
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="CHINHSACH\cs_baohanh.ascx" />
+    <Content Include="CHINHSACH\cs_chatluong.ascx" />
+    <Content Include="CHINHSACH\cs_doitra.ascx" />
+    <Content Include="CHINHSACH\cs_InfoSec.ascx" />
+    <Content Include="CHINHSACH\cs_vanchuyen.ascx" />
+    <Content Include="CHINHSACH\Huongdan.ascx" />
+    <Content Include="CHINHSACH\cs.css" />
+    <Content Include="css\admin.css" />
+    <Content Include="css\index1.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\util.css" />
+    <Content Include="dangky.aspx" />
+    <Content Include="Dky.aspx" />
+    <Content Include="doipassword.aspx" />
+    <Content Include="full.css" />
+    <Content Include="GioHang\GioHang.ascx" />
+    <Content Include="GioHang\GioHang.aspx" />
+    <Content Include="GioHang\JsGH.js" />
+    <Content Include="GioHang\update.ascx" />
+    <Content Include="GioiThieu\Gioithieu.ascx" />
+    <Content Include="GioiThieu\phanhoihk\PH.ascx" />
+    <Content Include="GioiThieu\ThongBao\Nction.ascx" />
+    <Content Include="GioiThieu\ThongBao\searchHoaDon.ascx" />
+    <Content Include="GioiThieu\tintuc\addtintuc.ascx" />
+    <Content Include="GioiThieu\tintuc\admintt.ascx" />
+    <Content Include="GioiThieu\tintuc\thongke.ascx" />
+    <Content Include="GioiThieu\tintuc\tin.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="HoaDon\donhang.ascx" />
+    <Content Include="HoaDon\TThoadon.ascx" />
+    <Content Include="img\7\acer.png" />
+    <Content Include="img\7\apple.png" />
+    <Content Include="img\7\asus.png" />
+    <Content Include="img\7\dell.png" />
+    <Content Include="img\7\hp.png" />
+    <Content Include="img\7\lenovo.png" />
+    <Content Include="img\7\lg.png" />
+    <Content Include="img\7\microsoft.png" />
+    <Content Include="img\7\msi.png" />
+    <Content Include="img\7\razer.png" />
+    <Content Include="img\NhanVien\NV2\1.png" />
+    <Content Include="img\p_laptop\cart\MB-BANK.png" />
+    <Content Include="img\p_laptop\cart\MOMO.png" />
+    <Content Include="img\p_laptop\cart\TECHCOMBANK.png" />
+    <Content Include="img\p_laptop\cart\VIETCOMBANK.png" />
+    <Content Include="img\p_laptop\cart\VIETINBANK.png" />
+    <Content Include="img\SP\anh san pham\Dell Gaming G15 5525 R7H165W11GR3060\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Gaming G15 5525 R7H165W11GR3060\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Gaming G15 5525 R7H165W11GR3060\3.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 111\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 111\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 111\3.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 14 7420\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 14 7420\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 14 7420\3.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron\3.png" />
+    <Content Include="img\SP\anh san pham\Dell Latitude 7320\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Latitude 7320\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Latitude 7320\3.png" />
+    <Content Include="img\SP\anh san pham\Dell Vostro 3430 71012103\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Vostro 3430 71012103\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Vostro 3430 71012103\3.png" />
+    <Content Include="img\SP\anh san pham\MSI Gaming Cyborg 14 A12UCX A51\1.png" />
+    <Content Include="img\SP\anh san pham\MSI Gaming Cyborg 14 A12UCX A51\2.png" />
+    <Content Include="img\SP\anh san pham\MSI Gaming Cyborg 14 A12UCX A51\3.png" />
+    <Content Include="img\_nuxt\icons\user.png" />
+    <Content Include="js\footable.js" />
+    <Content Include="js\main.js" />
+    <Content Include="KhachHang\KhachHang.ascx" />
+    <Content Include="KhachHang\ThongtinKH.ascx" />
+    <Content Include="NhanVien\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="quantri\thong-ke\chart.ascx" />
+    <Content Include="quantri\thong-ke\chartmin.ascx" />
+    <Content Include="SANPHAM\load-ncc-lh\LoaiHang.ascx" />
+    <Content Include="SANPHAM\thanhtoan\NganHang\etd_task.ascx" />
+    <Content Include="SANPHAM\thanhtoan\NganHang\loadnh.ascx" />
+    <Content Include="SANPHAM\thanhtoan\NganHang\ThanhToanKD.ascx" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="NhanVien\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="NhanVien\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="img\1920x1080 copy-01.svgz" />
+    <Content Include="img\1920x1080.png" />
+    <Content Include="img\aaa.png" />
+    <Content Include="img\a\866x374-7.jpg" />
+    <Content Include="img\a\866x374.jpg" />
+    <Content Include="img\a\Bản sao Resize 1.jpg" />
+    <Content Include="img\a\Lenovo Banner 1 .jpg" />
+    <Content Include="img\a\Lenovo Day 866x374-05-2.jpg" />
+    <Content Include="img\a\ThinkPro-Logo-PNG.phd" />
+    <Content Include="img\a\ThinkPro-Logo-PNG.png" />
+    <Content Include="img\a\ThinkPro-Logo-PNG_cache\thumbnail.db" />
+    <Content Include="img\a\ThinkPro-Logo-PNG_cache\thumbnail_metadata.db" />
+    <Content Include="img\a\ThinkPro-Logo-PNG_faces\DaVinci.fdb" />
+    <Content Include="img\a\ThinkPro-Logo-PNG_faces\DV-cache.fdb" />
+    <Content Include="img\a\ThinkPro-Logo-PNG_faces\fm_thumbnail.db" />
+    <Content Include="img\a\ThinkPro-Logo-PNG_faces\fm_thumbnail_metadata.db" />
+    <Content Include="img\a\Untitled-1.png" />
+    <Content Include="img\b.png" />
+    <Content Include="img\lenovo-logo-image.png" />
+    <Content Include="img\online-only-banner.png" />
+    <Content Include="img\picxx\123\z3338849369381_c1fe97c6bd0a03029d8ec300431ce43d.jpg" />
+    <Content Include="img\picxx\1920x1080.png" />
+    <Content Include="img\picxx\aai.ai" />
+    <Content Include="img\picxx\Ephoto360.com_164013cfc83fa7.jpg" />
+    <Content Include="img\picxx\Ephoto360.com_1640143ecd7412-removebg-preview.png" />
+    <Content Include="img\picxx\Ephoto360.com_1640143ecd7412.jpg" />
+    <Content Include="img\picxx\image-removebg-preview %281%29.png" />
+    <Content Include="img\picxx\image-removebg-preview %282%29.png" />
+    <Content Include="img\picxx\image-removebg-preview.png" />
+    <Content Include="img\p_laptop\csach\clg.jpg" />
+    <Content Include="img\p_laptop\dell-xps-13-plus-9320-thinkpro-01.jpg" />
+    <Content Include="img\p_laptop\online-only-banner.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 14 7420 2 in 1\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 14 7420 2 in 1\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Inspiron 14 7420 2 in 1\3.png" />
+    <Content Include="img\SP\anh san pham\Dell Latitude 7320 Detachable\1.png" />
+    <Content Include="img\SP\anh san pham\Dell Latitude 7320 Detachable\2.png" />
+    <Content Include="img\SP\anh san pham\Dell Latitude 7320 Detachable\3.png" />
+    <Content Include="img\SP\anh san pham\Dell precision 15 5560\1.png" />
+    <Content Include="img\SP\anh san pham\Dell precision 15 5560\2.png" />
+    <Content Include="img\SP\anh san pham\Dell precision 15 5560\3.png" />
+    <Content Include="img\SP\anh san pham\Dell XPS 13 Plus\1.png" />
+    <Content Include="img\SP\anh san pham\Dell XPS 13 Plus\2.png" />
+    <Content Include="img\SP\anh san pham\Dell XPS 13 Plus\3.png" />
+    <Content Include="img\SP\anh san pham\Dell XPS 13 Plus\4.png" />
+    <Content Include="img\SP\anh san pham\Dell XPS 13 Plus\5.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Carbon Gen 10\1.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Carbon Gen 10\2.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Carbon Gen 10\3.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Carbon Gen 10\4.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Nano Gen 2\1.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Nano Gen 2\2.png" />
+    <Content Include="img\SP\anh san pham\Lenovo ThinkPad X1 Nano Gen 2\3.png" />
+    <Content Include="img\SP\anh san pham\Microsoft Surface Pro 9\1.png" />
+    <Content Include="img\SP\anh san pham\Microsoft Surface Pro 9\2.png" />
+    <Content Include="img\SP\asus\nb\40676_40676_laptop_asus_rog_strix_g15_g513ih_hn015w__1__anphat_pc.jpg" />
+    <Content Include="img\SP\asus\nb\40676_laptop_asus_rog_strix_g15_g513ih_hn015w__3_.jpg" />
+    <Content Include="img\SP\asus\nb\40676_laptop_asus_rog_strix_g15_g513ih_hn015w__5_.jpg" />
+    <Content Include="img\SP\asus\nb\40676_laptop_asus_rog_strix_g15_g513ih_hn015w__6_.jpg" />
+    <Content Include="img\z4170376418498_71120375c10f50491a81fbd62b48993a.jpg" />
+    <Content Include="img\_nuxt\icons\icon_512x512.9f120f.png" />
+    <Content Include="img\_nuxt\icons\icon_64x64.9f120f.png" />
+    <Content Include="img\_nuxt\icons\logoweb.png" />
+    <Content Include="img\_nuxt\icons\vietqe.png" />
+    <Content Include="img\_nuxt\icons\vnpay.png" />
+    <Content Include="img\_nuxt\img\1.19827b1.png" />
+    <Content Include="img\_nuxt\img\2d-design.011e02d.png" />
+    <Content Include="img\_nuxt\img\2d-design.f684fcf.png" />
+    <Content Include="img\_nuxt\img\3d-design.4049e29.png" />
+    <Content Include="img\_nuxt\img\3d-design.b015400.png" />
+    <Content Include="img\_nuxt\img\40-banks-vnpay.5260cc1.png" />
+    <Content Include="img\_nuxt\img\balo.3356907.png" />
+    <Content Include="img\_nuxt\img\ban-phim.b3480f6.png" />
+    <Content Include="img\_nuxt\img\chuot.ef110b0.png" />
+    <Content Include="img\_nuxt\img\cong-chuyen.f8410c8.png" />
+    <Content Include="img\_nuxt\img\default_content_thumb.8d71792.png" />
+    <Content Include="img\_nuxt\img\fallback-image.4d0336f.png" />
+    <Content Include="img\_nuxt\img\gaming.23f7e70.png" />
+    <Content Include="img\_nuxt\img\gaming.70f30b3.png" />
+    <Content Include="img\_nuxt\img\keychron.6a2391e.png" />
+    <Content Include="img\_nuxt\img\lap-trinh.881ebc3.png" />
+    <Content Include="img\_nuxt\img\lap-trinh.920523a.png" />
+    <Content Include="img\_nuxt\img\lg.8e06948.png" />
+    <Content Include="img\_nuxt\img\logitech.81491aa.png" />
+    <Content Include="img\_nuxt\img\person_content.17cc405.png" />
+    <Content Include="img\_nuxt\img\popover-promo-banner.674e473.png" />
+    <Content Include="img\_nuxt\img\quay-dung-video.129b3d2.png" />
+    <Content Include="img\_nuxt\img\quay-dung-video.d804d0b.png" />
+    <Content Include="img\_nuxt\img\ram.561e2d5.png" />
+    <Content Include="img\_nuxt\img\razer.7fbce79.png" />
+    <Content Include="img\_nuxt\img\samsung.353c45b.png" />
+    <Content Include="img\_nuxt\img\store-01-sm.9f650d0.png" />
+    <Content Include="img\_nuxt\img\store-02-sm.0a986a3.png" />
+    <Content Include="img\_nuxt\img\store-03-sm.c9cd4d8.png" />
+    <Content Include="img\_nuxt\img\tai-nghe.168fcd4.png" />
+    <Content Include="img\_nuxt\img\tomtoc.f35f1ed.png" />
+    <Content Include="img\_nuxt\img\van-phong.d1bec95.png" />
+    <Content Include="img\_nuxt\img\van-phong.e9c8981.png" />
+    <Content Include="img\Ảnh chụp màn hình 2023-03-08 100707.png" />
+    <Content Include="login\dangnhap.ascx" />
+    <Content Include="login\dki.ascx" />
+    <Content Include="NhanVien\TTNhanVien.ascx" />
+    <Content Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    <Content Include="index.aspx" />
+    <Content Include="main.aspx" />
+    <Content Include="NhanVien\Nhanvien.ascx" />
+    <Content Include="quantri\admin_user.ascx" />
+    <Content Include="quantri\upd_Is_Dl\admin_user.ascx" />
+    <Content Include="quantri\upd_Is_Dl\Kh_user.ascx" />
+    <Content Include="quantri\user.ascx" />
+    <Content Include="quantri\User_KH.ascx" />
+    <Content Include="quenpassword.aspx" />
+    <Content Include="SANPHAM\ChiTiet.aspx" />
+    <Content Include="SANPHAM\ChiTietSP.ascx" />
+    <Content Include="SANPHAM\jsonload.js" />
+    <Content Include="SANPHAM\load-ncc-lh\addncc.ascx" />
+    <Content Include="SANPHAM\newsp.ascx" />
+    <Content Include="SANPHAM\sanpham.ascx" />
+    <Content Include="SANPHAM\thanhtoan\cusit.ascx" />
+    <Content Include="SANPHAM\thanhtoan\dathang\ThanhToan.ascx" />
+    <Content Include="SANPHAM\thanhtoan\dathang\thongtinkh.ascx" />
+    <Content Include="SANPHAM\thanhtoan\thanhtoan.ascx" />
+    <Content Include="SANPHAM\tt_sp.ascx" />
+    <Content Include="soluction.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\admin.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\Classcheck.cs" />
+    <Compile Include="App_Start\datadn.cs" />
+    <Compile Include="App_Start\dataindex.cs" />
+    <Compile Include="App_Start\password.cs" />
+    <Compile Include="App_Start\passwordBase.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CHINHSACH\cs_baohanh.ascx.cs">
+      <DependentUpon>cs_baohanh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_baohanh.ascx.designer.cs">
+      <DependentUpon>cs_baohanh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_chatluong.ascx.cs">
+      <DependentUpon>cs_chatluong.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_chatluong.ascx.designer.cs">
+      <DependentUpon>cs_chatluong.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_doitra.ascx.cs">
+      <DependentUpon>cs_doitra.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_doitra.ascx.designer.cs">
+      <DependentUpon>cs_doitra.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_InfoSec.ascx.cs">
+      <DependentUpon>cs_InfoSec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_InfoSec.ascx.designer.cs">
+      <DependentUpon>cs_InfoSec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_vanchuyen.ascx.cs">
+      <DependentUpon>cs_vanchuyen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINHSACH\cs_vanchuyen.ascx.designer.cs">
+      <DependentUpon>cs_vanchuyen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CHINHSACH\Huongdan.ascx.cs">
+      <DependentUpon>Huongdan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINHSACH\Huongdan.ascx.designer.cs">
+      <DependentUpon>Huongdan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dangky.aspx.cs">
+      <DependentUpon>dangky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dangky.aspx.designer.cs">
+      <DependentUpon>dangky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dky.aspx.cs">
+      <DependentUpon>Dky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dky.aspx.designer.cs">
+      <DependentUpon>Dky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doipassword.aspx.cs">
+      <DependentUpon>doipassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doipassword.aspx.designer.cs">
+      <DependentUpon>doipassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang\datagiohang.cs" />
+    <Compile Include="GioHang\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang\GioHang.ascx.designer.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang\GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang\GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GioHang\update.ascx.cs">
+      <DependentUpon>update.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang\update.ascx.designer.cs">
+      <DependentUpon>update.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\Gioithieu.ascx.cs">
+      <DependentUpon>Gioithieu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\Gioithieu.ascx.designer.cs">
+      <DependentUpon>Gioithieu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\phanhoihk\PH.ascx.cs">
+      <DependentUpon>PH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\phanhoihk\PH.ascx.designer.cs">
+      <DependentUpon>PH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\ThongBao\Nction.ascx.cs">
+      <DependentUpon>Nction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\ThongBao\Nction.ascx.designer.cs">
+      <DependentUpon>Nction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\ThongBao\searchHoaDon.ascx.cs">
+      <DependentUpon>searchHoaDon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\ThongBao\searchHoaDon.ascx.designer.cs">
+      <DependentUpon>searchHoaDon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\addtintuc.ascx.cs">
+      <DependentUpon>addtintuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\addtintuc.ascx.designer.cs">
+      <DependentUpon>addtintuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\admintt.ascx.cs">
+      <DependentUpon>admintt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\admintt.ascx.designer.cs">
+      <DependentUpon>admintt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\thongke.ascx.cs">
+      <DependentUpon>thongke.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\thongke.ascx.designer.cs">
+      <DependentUpon>thongke.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\tin.ascx.cs">
+      <DependentUpon>tin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\tin.ascx.designer.cs">
+      <DependentUpon>tin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GioiThieu\tintuc\tt_tintuc.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\clsHD.cs" />
+    <Compile Include="HoaDon\donhang.ascx.cs">
+      <DependentUpon>donhang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoaDon\donhang.ascx.designer.cs">
+      <DependentUpon>donhang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon\TThoadon.ascx.cs">
+      <DependentUpon>TThoadon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoaDon\TThoadon.ascx.designer.cs">
+      <DependentUpon>TThoadon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\Kh.cs" />
+    <Compile Include="KhachHang\KhachHang.ascx.cs">
+      <DependentUpon>KhachHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KhachHang\KhachHang.ascx.designer.cs">
+      <DependentUpon>KhachHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang\newttkhcl.cs" />
+    <Compile Include="KhachHang\ThongtinKH.ascx.cs">
+      <DependentUpon>ThongtinKH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KhachHang\ThongtinKH.ascx.designer.cs">
+      <DependentUpon>ThongtinKH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="login\dangnhap.ascx.cs">
+      <DependentUpon>dangnhap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login\dangnhap.ascx.designer.cs">
+      <DependentUpon>dangnhap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="login\dki.ascx.cs">
+      <DependentUpon>dki.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login\dki.ascx.designer.cs">
+      <DependentUpon>dki.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\Nhanvien.ascx.cs">
+      <DependentUpon>Nhanvien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NhanVien\Nhanvien.ascx.designer.cs">
+      <DependentUpon>Nhanvien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\nhanvien.cs" />
+    <Compile Include="NhanVien\TTNhanVien.ascx.cs">
+      <DependentUpon>TTNhanVien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NhanVien\TTNhanVien.ascx.designer.cs">
+      <DependentUpon>TTNhanVien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quantri\admin_user.ascx.cs">
+      <DependentUpon>admin_user.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\admin_user.ascx.designer.cs">
+      <DependentUpon>admin_user.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quantri\thong-ke\chart.ascx.cs">
+      <DependentUpon>chart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\thong-ke\chart.ascx.designer.cs">
+      <DependentUpon>chart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quantri\thong-ke\chartmin.ascx.cs">
+      <DependentUpon>chartmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\thong-ke\chartmin.ascx.designer.cs">
+      <DependentUpon>chartmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quantri\thong-ke\chart_cs.cs" />
+    <Compile Include="quantri\upd_Is_Dl\admin_user.ascx.cs">
+      <DependentUpon>admin_user.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\upd_Is_Dl\admin_user.ascx.designer.cs">
+      <DependentUpon>admin_user.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quantri\upd_Is_Dl\Kh_user.ascx.cs">
+      <DependentUpon>Kh_user.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\upd_Is_Dl\Kh_user.ascx.designer.cs">
+      <DependentUpon>Kh_user.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quantri\user.ascx.cs">
+      <DependentUpon>user.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\user.ascx.designer.cs">
+      <DependentUpon>user.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quantri\useradmin.cs" />
+    <Compile Include="quantri\usertkk.cs" />
+    <Compile Include="quantri\User_KH.ascx.cs">
+      <DependentUpon>User_KH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quantri\User_KH.ascx.designer.cs">
+      <DependentUpon>User_KH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="quenpassword.aspx.cs">
+      <DependentUpon>quenpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quenpassword.aspx.designer.cs">
+      <DependentUpon>quenpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\ChiTiet.aspx.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\ChiTiet.aspx.designer.cs">
+      <DependentUpon>ChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\ChiTietSP.ascx.cs">
+      <DependentUpon>ChiTietSP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\ChiTietSP.ascx.designer.cs">
+      <DependentUpon>ChiTietSP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\datasp.cs" />
+    <Compile Include="SANPHAM\imgsp.cs" />
+    <Compile Include="SANPHAM\load-ncc-lh\addncc.ascx.cs">
+      <DependentUpon>addncc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\load-ncc-lh\addncc.ascx.designer.cs">
+      <DependentUpon>addncc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\load-ncc-lh\LoaiHang.ascx.cs">
+      <DependentUpon>LoaiHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\load-ncc-lh\LoaiHang.ascx.designer.cs">
+      <DependentUpon>LoaiHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\newsp.ascx.cs">
+      <DependentUpon>newsp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\newsp.ascx.designer.cs">
+      <DependentUpon>newsp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\product.cs" />
+    <Compile Include="SANPHAM\ProductDbContext.cs" />
+    <Compile Include="SANPHAM\sanpham.ascx.cs">
+      <DependentUpon>sanpham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\sanpham.ascx.designer.cs">
+      <DependentUpon>sanpham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\cusit.ascx.cs">
+      <DependentUpon>cusit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\cusit.ascx.designer.cs">
+      <DependentUpon>cusit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\dathang\ThanhToan.ascx.cs">
+      <DependentUpon>ThanhToan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\dathang\ThanhToan.ascx.designer.cs">
+      <DependentUpon>ThanhToan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\dathang\thongtinkh.ascx.cs">
+      <DependentUpon>thongtinkh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\dathang\thongtinkh.ascx.designer.cs">
+      <DependentUpon>thongtinkh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\NganHang\ApiBank_Request.cs" />
+    <Compile Include="SANPHAM\thanhtoan\NganHang\ApiRequest.cs" />
+    <Compile Include="SANPHAM\thanhtoan\NganHang\Bank.cs" />
+    <Compile Include="SANPHAM\thanhtoan\NganHang\etd_task.ascx.cs">
+      <DependentUpon>etd_task.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\NganHang\etd_task.ascx.designer.cs">
+      <DependentUpon>etd_task.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\NganHang\loadnh.ascx.cs">
+      <DependentUpon>loadnh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\NganHang\loadnh.ascx.designer.cs">
+      <DependentUpon>loadnh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\NganHang\ThanhToanKD.ascx.cs">
+      <DependentUpon>ThanhToanKD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\NganHang\ThanhToanKD.ascx.designer.cs">
+      <DependentUpon>ThanhToanKD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\thanhtoan.ascx.cs">
+      <DependentUpon>thanhtoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\thanhtoan.ascx.designer.cs">
+      <DependentUpon>thanhtoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM\thanhtoan\TTthanhtoan.cs" />
+    <Compile Include="SANPHAM\tt_sp.ascx.cs">
+      <DependentUpon>tt_sp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SANPHAM\tt_sp.ascx.designer.cs">
+      <DependentUpon>tt_sp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="soluction.aspx.cs">
+      <DependentUpon>soluction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="soluction.aspx.designer.cs">
+      <DependentUpon>soluction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\Theme1\" />
+    <Folder Include="img\NhanVien\NV3\" />
+    <Folder Include="img\tintuc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50557</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44320/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
